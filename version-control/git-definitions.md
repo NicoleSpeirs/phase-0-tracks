@@ -1,3 +1,6 @@
+Hi Glenna!!!
+
+
 # Git Definitions
 
 **Instructions: ** Define each of the following Git concepts.
@@ -13,3 +16,4 @@ A commit is a save checkpoint with a note. Descriptive and short message makes a
 
 * What is a merge conflict?
 when two different code mergers don't agree with each other. 
+
