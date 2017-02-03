@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html>
-<head>
-
-
-  <title>voter registration</title>
-</head>
-<body>
-
-
-
-
-<form action="success.html" method="post">
-</div>
-      <label>Which party are you a member of?:</label>
-      <select name="bike">
-        <option value="road">Democrat</option>
-        <option value="road">Republican</option>
-        <option value="road">Independent</option>
-      </select>
-  <div>
-    <label>Email:</label>
-    <input type="email" name="email">
-  </div>
-    <label>Password:</label>
-    <input type="password" name="password">
-  </div>
-  <button type="submit">Log in</button>
-</form>
-<p><strong>Thanks for submitting your form!</strong></p>
-</body>
+  <head>
+    <title>voter registration</title>
+  </head>
+  <body>
+    <form action="success.html" method="post">
+      <div>
+        <label>Which party are you a member of?:</label>
+        <select name="bike">
+          <option value="road">Democrat</option>
+          <option value="road">Republican</option>
+          <option value="road">Independent</option>
+        </select>
+        <br>
+        <br>
+        <input type="checkbox" name="vehicle" value="Bike"> I have voted before<br>
+        <br>
+        <label> I am:</label>
+        <br>
+        <input type="radio" name="gender" value="male" checked> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+        <input type="radio" name="gender" value="other"> Other
+        <div>
+          <br>
+          <label>Email:</label>
+          <input type="email" name="email">
+        </div>
+        <label>Password:</label>
+        <input type="password" name="password">
+      </div>
+      <br>
+      <br>
+      <div>
+        <textarea name="textarea" rows="5" cols="40">Write something here</textarea>
+      </div>
+      <button type="submit">Log in</button>
+    </form>
+  </body>
 </html>
