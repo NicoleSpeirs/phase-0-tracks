@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>voter registration</title>
+  </head>
+  <body>
+    <form action="success.html" method="post">
+      <div>
+        <label>Which party are you a member of?:</label>
+        <select name="party">
+          <option value="democrat">Democrat</option>
+          <option value="republican">Republican</option>
+          <option value="independent">Independent</option>
+        </select>
+        <br>
+        <br>
+        <input type="checkbox" name="voter" value="yes"> I have voted before<br>
+        <br>
+        <label> I am:</label>
+        <br>
+        <input type="radio" name="gender" value="male" checked> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+        <input type="radio" name="gender" value="other"> Other
+        <div>
+          <br>
+          <label>Email:</label>
+          <input type="email" name="email">
+        </div>
+        <label>Password:</label>
+        <input type="password" name="password">
+      </div>
+      <br>
+      <br>
+      <div>
+        <textarea name="about_you" rows="5" cols="40">Tell us about yourself</textarea>
+      </div>
+      <button type="submit">Log in</button>
+    </form>
+  </body>
+</html>
