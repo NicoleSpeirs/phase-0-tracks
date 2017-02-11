@@ -4,8 +4,13 @@ blockquote {
   margin-left: 0px;
 }
 
-body { max-width: 960px; 
+body { max-width: 960px;margin:0 auto;
 }
+
+/*#page-wrap {
+  width: 
+  margin:0 auto;
+}*/
 cite {
   display: block;
   margin-top: 10px;
@@ -34,3 +39,18 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
+@media screen and (max-width: 500px) {
+  #external-links{display: block} 
+  main {width: 90%; margin:0 auto; display:block;}
+}
+  
+}
+  
+}
+/*@media screen and (max-width: 500px) {
+  body {
+    background-color: beige;
+  }
+}
+*/
