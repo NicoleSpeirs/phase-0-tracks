@@ -1,0 +1,4 @@
+-listen for commands
+-when a command is received
+  -if it exists press the button for the requested floor number
+  -else ask for an existing floor number
