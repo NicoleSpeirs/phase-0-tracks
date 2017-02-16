@@ -1,0 +1,24 @@
+
+Elevator Algorithm
+- listen for commands
+- when a command is received
+  - if it exists press the button for the requested floor number
+  - else ask for an existing floor number
+
+
+Real-Life Algorithm Washing the Dishes
+- If the sink has some dishes
+  - grab washing sponge
+  - open the faucet
+  - wet the sponge
+  - pour dish-washing soap on the sponge
+  - While dishes are in the sink
+    - If sponge needs more dish-washing soap
+      - add dish-washing soap
+    - grab a dish from the sink
+    - scrub the dish with the sponge
+    - rinse the dish with clean water
+    - place the dish on the drying rack
+  - turn off the faucet
+- Else if there are no dishes in the sink
+  - don't do anything
