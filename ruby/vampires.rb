@@ -1,19 +1,57 @@
-print "What is your name?"
-name = gets.chomp
+print "How many employees will be processed?"
+employees = gets.chomp.to_i
 
+employees.times do
+  print "What is your name?"
+  name = gets.chomp.downcase
 
-print "How old are you?"
-age = gets.chomp.to_i
+  print "How old are you?"
+  age = gets.chomp.to_i
 
-print "What year were you born?"
-year = gets.chomp.to_i
+  print "What year were you born?"
+  year = gets.chomp.to_i
 
-print "Should we order some garlic for you?"
-garlic = gets.chomp
+  garlic = nil
+  until garlic == true ||  garlic == false
+    print "Should we order some garlic for you? [Y/N}"
+    input = gets.chomp.downcase
+    case input
+    when 'y'
+      garlic = true
+    when 'n'
+      garlic = false
+    else
+      puts "Please answer Y/N only!"
+    end
+  end
 
-print "Would you like to enroll in the company's health insurance?"
-insurance = gets.chomp
+  insurance = nil
+  until insurance == true || insurance == false
+    print "Would you like to enroll in the company's health insurance? [Y/N] "
+    input = gets.chomp.downcase
+    case input
+    when 'y'
+      insurance = true
+    when 'n'
+      insurance = false
+    else
+      puts "Please answer Y/N only!"
+    end
+  end
 
+  correct_age = 2017 - age == year
 
-correct_age = 2017 - age == year
+  case
+  when name == "drake cula" || name == "tu fang"
+    puts "Definitely a vampire!"
+  when correct_age == false && garlic == false && insurance == false
+    puts "Almost certainly a vampire!"
+  when correct_age == false && (garlic == false || insurance == false)
+    puts "Probably a vampire!"
+  when correct_age == true && garlic == true && insurance == true
+    puts "Probably not a vampire!"
+  else
+   puts "Results inconclusive."
+  end
+end
 
