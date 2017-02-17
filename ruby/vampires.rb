@@ -1,15 +1,15 @@
-print "How many employees will be processed?"
+puts "How many employees will be processed?"
 employees = gets.chomp.to_i
 employees = 1
 
 employees.times do
-  print "What is your name?"
+  puts "What is your name?"
   name = gets.chomp.downcase
 
-  print "How old are you?"
+  puts "How old are you?"
   age = gets.chomp.to_i
 
-  print "What year were you born?"
+  puts "What year were you born?"
   year = gets.chomp.to_i
 
   alergies = nil
@@ -19,13 +19,14 @@ employees.times do
     case alergies
     when "sunshine"
       puts "Probably a vampire"
+      puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
       exit
     end
   end
 
   garlic = nil
   until garlic == true ||  garlic == false
-    print "Should we order some garlic for you? [Y/N}"
+    puts "Should we order some garlic for you? [Y/N}"
     input = gets.chomp.downcase
     case input
     when 'y'
@@ -39,7 +40,7 @@ employees.times do
 
   insurance = nil
   until insurance == true || insurance == false
-    print "Would you like to enroll in the company's health insurance? [Y/N] "
+    puts "Would you like to enroll in the company's health insurance? [Y/N] "
     input = gets.chomp.downcase
     case input
     when 'y'
@@ -67,4 +68,4 @@ employees.times do
    puts "Results inconclusive."
   end
 end
-
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
