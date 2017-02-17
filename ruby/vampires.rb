@@ -1,6 +1,5 @@
 puts "How many employees will be processed?"
 employees = gets.chomp.to_i
-employees = 1
 
 employees.times do
   puts "What is your name?"
