@@ -1,5 +1,6 @@
 print "How many employees will be processed?"
 employees = gets.chomp.to_i
+employees = 1
 
 employees.times do
   print "What is your name?"
@@ -10,6 +11,17 @@ employees.times do
 
   print "What year were you born?"
   year = gets.chomp.to_i
+
+  alergies = nil
+  until alergies == "done" || alergies == "sunshine"
+    puts "Name any allergies that you have [type 'done' when finished]"
+    alergies = gets.chomp
+    case alergies
+    when "sunshine"
+      puts "Probably a vampire"
+      exit
+    end
+  end
 
   garlic = nil
   until garlic == true ||  garlic == false
@@ -38,6 +50,7 @@ employees.times do
       puts "Please answer Y/N only!"
     end
   end
+
 
   correct_age = 2017 - age == year
 
