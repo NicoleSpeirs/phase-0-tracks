@@ -24,16 +24,29 @@ def scramble (sentence) #=> "Nicole Speirs"
   #=> "Ojbmf Tqfjst"
 end
 
-p scramble(name)
+# p scramble(name)
 
 # puts next_letter ("a")
 
-# puts "Welcome to Alias Spy Manager"
-# puts "Please enter your name"
-#  name = gets.chomp.to_i
+puts "Welcome to Alias Spy Manager"
+spy_names = []
 
-# if name == "quit"
-#   puts "Thank you for visiting! See you soon!"
-# end
+ loop do
+    puts "Please enter your name"
+    puts "Type 'quit' to exit"
+    input = gets.chomp
 
-# puts "Type 'quit' to exit"
+
+    if input == "quit"
+      puts "Thank you for visiting! See you soon!"
+      p spy_names.join(" ")
+      break
+    else
+      fake_name = scramble(input)
+      p fake_name
+      spy_names << fake_name
+    end
+end
+
+
+
