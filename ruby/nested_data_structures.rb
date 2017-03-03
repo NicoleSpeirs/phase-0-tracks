@@ -22,6 +22,10 @@ move= {
     'certificate of wellness',
     'business card of old vet',
     ]
-
-
 }
+
+# puts move
+
+p move["Pets"]
+move["Get a moving truck"][0] = "budget"
+p move["Get a moving truck"][0]
