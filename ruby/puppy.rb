@@ -22,7 +22,7 @@
 # zoe = Puppy.new
 # toby = Puppy.new
 # berry = Puppy.new
-# toby.instance_of?(Puppy)
+# toby.instancem_of?(Puppy)
 
 class Puppy
 
