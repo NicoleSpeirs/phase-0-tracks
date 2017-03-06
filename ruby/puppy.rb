@@ -49,12 +49,7 @@ class Puppy
   def initialize
     puts "Initializing new puppy instance ..."
   end
-
-
 end
-
-
-
 
 zoe = Puppy.new
 toby = Puppy.new
@@ -68,4 +63,36 @@ toby.dog_years(13)
 zoe.dog_years(4)
 toby.cookie_count(100)
 
+class Cat
 
+  def initialize
+    puts "A new cat has been initialized..."
+  end
+
+  def speak(n=1)
+    puts "Meow " * n
+  end
+
+  def sleep(hours)
+    puts "Slept for #{hours} hours!"
+  end
+end
+
+
+# shakira = Cat.new
+# cocoa = Cat.new
+
+
+# shakira.speak(5)
+# shakira.sleep(7)
+
+
+cats = []
+
+50.times do
+  cats << Cgstat.new
+end
+
+cats.each do |cat|
+  cat.sleep(7)
+end
