@@ -45,6 +45,12 @@ class Puppy
   def cookie_count(n=1)
     puts "Puppy just ate #{n} Cookies!!"
   end
+
+  def initialize
+    puts "Initializing new puppy instance ..."
+  end
+
+
 end
 
 
@@ -52,6 +58,7 @@ end
 
 zoe = Puppy.new
 toby = Puppy.new
+berry = Puppy.new
 
 zoe.fetch("ball")
 toby.fetch("green stinky toy")
@@ -60,3 +67,5 @@ zoe.roll_over
 toby.dog_years(13)
 zoe.dog_years(4)
 toby.cookie_count(100)
+
+
