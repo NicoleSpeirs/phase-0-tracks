@@ -1,8 +1,11 @@
 class Santa
+
+  attr_reader :gender, :ethnicity
+  attr_accessor :name, :location
+
   def initialize(name, gender, ethnicity)
     @name = name
     @location = "The North Pole"
-    # puts "Initializing Santa instance..."
     @gender = gender
     @ethnicity = ethnicity
     @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
@@ -15,11 +18,6 @@ class Santa
 
   def eat_milk_and_cookies(cookie)
     puts "#{@name} That was a good #{cookie} cookie!"
-
-  end
-
-  def update_location(location)
-    @location = location
   end
 
   def about
@@ -28,7 +26,33 @@ class Santa
   end
 end
 
+santa = Santa.new("Bob", "Male", "White")
+p santa.name
+santa.name = "Bobby"
+p santa.name
 
+
+# we make an array of names to build santas with
+names = ["Tammy", "Jasmine", "Sherry", "Ken", "Adi", "ZooZoo", "N/A"]
+genders = ["agender", "female", "bigender", "male", "female", "gender", "N/A"]
+ethnicities = ["black","Latino","white","Japanese","Prefer not to say","Mystical unicorn)","N/A" ]
+# we make an empty container for our santa collection
+santas = []
+
+puts "Iterating through names list to create santas ..."
+names.each_with_index do |name, index|
+  puts "Creating a santa named #{name} ..."
+  santas << Santa.new(name, genders[index], ethnicities[index], )
+  puts "There are now #{santas.length} Santa instances in the array"
+  puts "----"
+end
+
+type_of_cookies = ["chocolate chip", "oat meat", "coconut", "almond biscuit", "butter pecan", "Christmas" ,"macaroon"]
+
+puts "Testing each Santa instance in the array to make sure it can eat a cookie!..."
+santas.each do |santa|
+  santa.eat_milk_and_cookies(type_of_cookies.sample)
+end
 
 # santa = Santa.new("Bob", "Male", "Asian")
 # santa.update_location("New York")
@@ -55,26 +79,40 @@ end
 # santas << Santa.new("N/A","N/A", "N/A")
 # p santas
 
-# we make an array of names to build santas with
-names = ["Tammy", "Jasmine", "Sherry", "Ken", "Adi", "ZooZoo", "N/A"]
-genders = ["agender", "female", "bigender", "male", "female", "gender", "N/A"]
-ethnicities = ["black","Latino","white","Japanese","Prefer not to say","Mystical unicorn)","N/A" ]
-# we make an empty container for our santa collection
-santas = []
+# class Reindeer
+#   attr_reader :name, :location
+    # ---> this is equal to
+            #getter methods for attributes
+                # def name
+                #   @name
+                # end
 
-puts "Iterating through names list to create santas ..."
-names.each_with_index do |name, index|
-  puts "Creating a santa named #{name} ..."
-  santas << Santa.new(name, genders[index], ethnicities[index], )
-  puts "There are now #{santas.length} Santa instances in the array"
-  puts "----"
-end
+                # def location
+                #   @location
+                # end
+                #if use attr_reader can remove the getter methods
+  # attr_accessor :name
+    # ---> declares for both getter and setter if you define :name here
+    # ---> you don need to do it also in attr_reader
+            # this equal to # setter method
+  #               def name=(new_name)
+  #                 @name = new_name
+  #               end
 
-type_of_cookies = ["chocolate chip", "oat meat", "coconut", "almond biscuit", "butter pecan", "Christmas" ,"macaroon"]
+  # attr_writer :name
+    #--->can use instead of att_reader
+    #---> the name will be writable but not readable
 
-puts "Testing each Santa instance in the array to make sure it can eat a cookie!..."
-santas.each do |santa|
-  santa.eat_milk_and_cookies(type_of_cookies.sample)
-end
 
+
+#   def initialize(name)
+#     @name = name
+#     @location = "the North Pole"
+#   end
+
+
+
+# def take_off(altitude)
+#   puts "#{@name} took off."
+#   puts "#{@name} ascended to #{altitude}"
 
