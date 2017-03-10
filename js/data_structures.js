@@ -14,12 +14,15 @@ console.log(horses);
 console.log(colors);
 //
 // #loop of horses
+var horse_colors = {};
+
 for (var i = 0; i < horses.length; i++) {
- console.log(horses[i]);
+  // console.log('i = ' + i + ' so horses[i] => ' + horses[i] + '.');
+  // console.log('i = ' + i + ' so colors[i] => ' + colors[i] + '.');
+  horse_colors[ horses[i] ] = colors[i];
 }
 
 var horse_info = {name: 'Sparkles', colors: 'blue'};
-
 
 // horse_colors = {
 //   name: 'Sparkles', color: 'blue',
@@ -30,13 +33,13 @@ var horse_info = {name: 'Sparkles', colors: 'blue'};
 // }
 
 
-var horse_colors = {
-  'Sparkles': 'blue',
-  'Zoe': 'purple',
-  'Mini': 'pink',
-  'Violet': 'red',
-  'Spot': 'green',
-}
+// var horse_colors = {
+//   'Sparkles': 'blue',
+//   'Zoe': 'purple',
+//   'Mini': 'pink',
+//   'Violet': 'red',
+//   'Spot': 'green',
+// }
 
 
 // var new_horse = [],
