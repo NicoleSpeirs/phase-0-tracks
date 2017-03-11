@@ -85,11 +85,6 @@ state_virus_predictor.virus_effects
 end
 
 
-
-
-
-
-
 #=======================================================================
 
 # DRIVER CODE
@@ -112,15 +107,15 @@ end
 #=======================================================================
 # Reflection Section
 
-#the different hush syntax in state_data.rb is THE hash rocket (=>) and the tailing symbol (:)
-#
-#require relative allows you to connect files that are in the same directory
+# the different hush syntax in state_data.rb is THE hash rocket (=>) and the tailing symbol (:)
+
+# require relative allows you to connect files that are in the same directory
 # in this case require_relative connects my_solution.rb file to state_data.rb
 # require is used to connect current directory to other directories but you
 # will need to specify where the file is for example: ../ or ./
 # we can use require './state_data' for this file and it will do the same as
 # require_relative.
-#
-#the concept that i solidified the most from this challenge is the difference
+
+# the concept that I solidified the most from this challenge is the difference
 # between require and require_relative as well as how to combine hashes using syntax
-# I also clarified the tern constant variable.
+# I also clarified the term constant variable.
