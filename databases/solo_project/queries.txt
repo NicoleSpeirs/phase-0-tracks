@@ -1,0 +1,49 @@
+
+Question 1.
+
+ SELECT * from dogs
+   ...> ;
+1|Toby|13|false|1
+2|Zoe|5|true|2
+3|Kujo|7|false|3
+4|Boomer|2|true|
+
+Question 2.
+
+UPDATE dogs SET vaccination_due="false" WHERE name="Boomer";
+
+ SELECT * from dogs;
+1|Toby|13|false|1
+2|Zoe|5|true|2
+3|Kujo|7|false|3
+4|Boomer|2|false|4
+
+
+Question 3.
+
+sqlite> SELECT * FROM dogs, dog_owners WHERE dogs.dog_owner_id= dog_owners.id;
+1|Toby|13|false|1|1|Emma Rockets|123 East 70th Street, NY|718-420-0981
+2|Zoe|5|true|2|2|Richard Greency|7575 Tomtom Ln, TX|917-555-1245
+3|Kujo|7|false|3|3|Jayla Thomas|4433 West 55th Street, NY|817-321-1234
+4|Boomer|2|false|4|4|Lili Roars|515 8th Ave, NY|212-505-5454
+sqlite>
+
+Question 4.
+
+sqlite> SELECT dog_owners.name, dogs.name FROM dogs, dog_owners WHERE dogs.dog_owner_id= dog_owners.id;
+Emma Rockets|Toby
+Richard Greency|Zoe
+Jayla Thomas|Kujo
+Lili Roars|Boomer
+sqlite>
+
+Question 5.
+
+sqlite> DELETE FROM dogs WHERE name="Boomer";
+sqlite> SELECT * FROM dogs
+   ...> ;
+1|Toby|13|false|1
+2|Zoe|5|true|2
+3|Kujo|7|false|3
+sqlite>
+
