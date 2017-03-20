@@ -7,8 +7,8 @@ require 'sqlite3'
 require 'faker'
 
 #  SQLite3 database
-db = SQLite3::Database.new("to_do_list.db")
-db.results_as_hash = true
+DB = SQLite3::Database.new("to_do_list.db")
+DB.results_as_hash = true
 
 # table
 create_table_cmd = <<-SQL
@@ -19,11 +19,15 @@ create_table_cmd = <<-SQL
   )
 SQL
 
-db.execute(create_table_cmd)
+DB.execute(create_table_cmd)
 
 def add(item)
-  db.execute("INSERT INTO to_do_list (item) VALUES (?)", [item])
+  DB.execute("INSERT INTO to_do_list (item, complete) VALUES (?, \"false\")", [item])
   puts "#{item} has been added"
+end
+
+def display_list
+  puts DB.execute("SELECT * FROM to_do_list")
 end
 
 #### DRIVER CODE
@@ -31,12 +35,12 @@ end
 puts "Welcome to To Do list!"
 
 loop do
-  puts "what would you like todo?"
+  puts "what would you like to do?"
   puts "enter 1 to add"
   puts "enter 2 to see your list"
   puts "type exit to exit"
 
-  input = gets.chomp
+  input = gets.chomp.downcase
   case input
   when "1"
     puts "What would you like to add?"
