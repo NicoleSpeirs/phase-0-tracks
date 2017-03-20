@@ -12,12 +12,14 @@ db.results_as_hash = true
 
 # table
 create_table_cmd = <<-SQL
-  CREATE TABLE IF to_do_list(
+  CREATE TABLE IF NOT EXISTS to_do_list(
     id INTEGER PRIMARY KEY,
     item VARCHAR(255),
-    urgent BOOLEAN
+    complete BOOLEAN
   )
 SQL
+
+db.execute(create_table_cmd)
 
 
 
