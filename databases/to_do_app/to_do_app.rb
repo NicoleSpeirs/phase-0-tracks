@@ -21,5 +21,34 @@ SQL
 
 db.execute(create_table_cmd)
 
+def add(item)
+  db.execute("INSERT INTO to_do_list (item) VALUES (?)", [item])
+  puts "#{item} has been added"
+end
 
+#### DRIVER CODE
 
+puts "Welcome to To Do list!"
+
+loop do
+  puts "what would you like todo?"
+  puts "enter 1 to add"
+  puts "enter 2 to see your list"
+  puts "type exit to exit"
+
+  input = gets.chomp
+  case input
+  when "1"
+    puts "What would you like to add?"
+    item = gets.chomp
+    add(item)
+
+  when "2"
+    display_list #make this method
+  when "exit"
+    puts "goodbye!"
+    break
+  else
+    puts "That's an unknown command, please try again..."
+  end
+end
