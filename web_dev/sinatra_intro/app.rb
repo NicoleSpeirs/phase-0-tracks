@@ -27,6 +27,12 @@ get '/contact' do
   "123 Learning Code Lane"
 end
 
+get '/great_job' do
+  person = params[:person]
+  "Good job! #{person}"
+end
+
+
 # write a GET route that retrieves
 # all student data
 get '/students' do
