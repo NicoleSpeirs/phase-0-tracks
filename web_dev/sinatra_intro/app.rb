@@ -32,6 +32,12 @@ get '/great_job' do
   "Good job! #{person}"
 end
 
+get '/add/:x/:y' do
+  x = params[:x]
+  y = params[:y]
+  "#{x} + #{y} = #{x.to_i + y.to_i}"
+end
+
 
 # write a GET route that retrieves
 # all student data
